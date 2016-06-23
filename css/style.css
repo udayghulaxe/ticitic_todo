@@ -1,0 +1,369 @@
+html,body{
+  width: 100%;
+  height: 100%;
+}
+
+.ng-scope.layout-row.flex {
+    min-height: 90%;
+}
+h1, h2,h3,h4,h5,h6,p{
+  margin:0;
+}
+
+::-webkit-scrollbar-track
+{
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar
+{
+  width: 6px;
+  background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb
+{
+  background-color: rgb(63,81,181);
+  border: 2px solid #555555;
+}
+
+.my-handle {
+  cursor: move !important;
+  cursor: -webkit-grabbing !important;
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+
+#rootContainer{
+	height: 100%;
+}
+
+#introContainer{
+	background: url('../images/headerD.gif');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 50% 50%;
+	height: 100%;
+}
+
+
+#list_content{
+  margin-left: 250px;
+  display: block;
+  margin-top: 60px;
+  min-width: 55%;
+}
+
+md-toolbar.header_toolbar{
+    padding-left: 250px;
+    position: fixed;
+}
+
+/*************** STYLE FOR SIDENAV**********************/
+md-sidenav.md-sidenav-left,
+md-sidenav.md-sidenav-left.md-locked-open,
+md-sidenav.md-sidenav-left._md-locked-open,
+md-sidenav.md-sidenav-left.md-closed.md-locked-open-add-active {
+    min-width: 200px !important;
+    width: 85vw !important;
+    position: fixed !important;
+    max-width: 250px !important;
+    position: fixed;
+    z-index: 999;
+    height: auto;
+   /*  background-color: #37474f !important; */
+}
+
+md-sidenav.todo_detail_sidenav,
+md-sidenav.todo_detail_sidenav.md-locked-open,
+md-sidenav.todo_detail_sidenav._md-locked-open,
+md-sidenav.todo_detail_sidenav.md-closed.md-locked-open-add-active {
+    min-width: 200px;
+    width: 85vw;
+    max-width: 350px;
+    position: fixed;
+    z-index: 999;
+    height: auto;
+}
+
+
+ md-sidenav.md-sidenav-left a.sidenav_links, .sidenav_link_span{
+  color: #424242 !important;
+  text-decoration: none;
+}
+
+md-sidenav.md-sidenav-left a.active>md-list-item{
+    background: rgba(0, 0, 0, 0.33);
+}
+
+md-sidenav.md-sidenav-left a:hover>md-list-item{
+    background: rgba(0, 0, 0, 0.07);
+}
+
+
+.user_info_div{
+  display: inline-block;
+}
+
+
+.user_avatar{
+  width: 36px;
+  height: 36px;
+  border-radius: 24px;
+}
+.user_info_div .user_avatar{
+  float: left;
+}
+
+.user_info_div p{
+  display: inline-block;
+  font-size: 14px;
+  vertical-align: sub;
+  margin-left: 10px;
+}
+
+
+/*********************************************/
+
+
+.input_error{
+	font-size: 12.5px;
+    color: #DD2C00;
+    padding-top: 2px;
+}
+
+.input_success{
+	font-size: 12.5px;
+    color: rgba(25, 132, 0, 0.81);
+    padding-top: 2px;
+}
+
+.md-toolbar-tools h1 {
+  font-size: inherit;
+  font-weight: inherit;
+  margin: inherit;
+}
+/************* LOGIN PAGE ****************/
+
+.login_intro{
+
+}
+.login_intro h1{
+	color: #ffffff;
+	margin-bottom: 0px
+}
+
+.login_intro p{
+	color: #ffffff;
+	margin: 0px;
+}
+
+.loginContainer{
+	background: url('../images/login_bg.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 50% 50%;
+}
+.loginBox{
+	width: 400px;
+	margin-top: 2%;
+}
+
+.login_button{
+	display: block;
+	width: 100%;
+}
+
+.full_width_button{
+	width: 100%;
+}
+
+.form_actions {
+    display: inline-block;
+    width: 95%;
+}
+/*********************************************/
+
+
+
+
+/**************** CSS FOR TODO LIST ***********************/
+
+#appContainer{
+  background: #ffffff;
+}
+
+.todo_list_item{
+  list-style: none;
+  padding:0;
+}
+
+#list_detail_data{
+  padding: 10px;
+}
+
+.todo_list_item li{
+  list-style: none;
+  padding:5px 8px 5px 8px;
+  margin:1px;
+  min-height: 28px;
+  position: relative;
+  border:1px solid rgba(218, 218, 218, 0.70);
+  border-radius: 4px;
+  width:98%;
+}
+
+/* .todo_list_item li md-checkbox,.todo_list_item li .list_actions{
+  display: inline-block;
+} */
+
+.ghost {
+  opacity: .7;
+  /* background: lightgrey; */
+  border-bottom: 2px solid #62B7FF !important;
+}
+
+
+.todo_list_item li .todo_itembody{
+  display: flex;
+}
+
+.todo_list_item li .todo_itembody md-checkbox{
+  margin-top: 4px;
+}
+
+.todo_title_wrapper{
+ /*  padding-left: 6px;
+ text-overflow: ellipsis;
+ overflow: hidden;
+ white-space: nowrap;
+ margin-right: 25px;
+ max-width: 600px; */
+    padding-left: 6px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    flex: 1;
+    width: 100%;
+    -webkit-box-flex: 1;
+}
+
+.todo_title_wrapper span{
+  font-size: 17px;
+  font-weight: 400;
+}
+
+.todo_list_item li span.todo_tags{
+    /* display: table; */
+    padding: 2px 4px;
+    color: #fff;
+    font-weight: 300;
+    font-size: 0.7rem;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    background-clip: padding-box;
+}
+
+.todo_microdata{
+  margin-left: 35px;
+}
+
+.due_date{
+  font-size: 10px;
+}
+
+.cyan_bg{
+    background-color: #00bcd4 !important
+}
+
+.teal_bg{
+  background-color: #009688 !important;
+}
+
+.purple_bg{
+  background-color: #9c27b0 !important;
+}
+
+.pink_bg{
+   background-color: #e91e63 !important;
+}
+
+.todo_list_item li md-icon, md-checkbox{
+  margin:0;
+}
+/* .todo_list_item li .list_actions{
+  right:0;
+  position: absolute;
+  margin-right: 3px;
+} */
+
+.todo_list_item li:focus{
+  border: 1px solid #CBE5FB;
+  outline: none;
+  background: aliceblue;
+}
+
+md-icon:focus{
+  border-color: transparent !important;
+  outline: transparent auto 0px !important;
+  background-image: none;
+  outline: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+/*********************************************************/
+
+@media only screen
+  and (max-width: 959px){
+    #list_content{
+        margin-left: 0px;
+    }
+  md-toolbar.header_toolbar{
+    padding-left: 0px;
+  }
+}
+
+@media only screen
+  and (max-width: 600px){
+  .todo_list_item li {
+    width: 95%;
+  }
+}
+
+
+@media only screen
+  and (max-width: 480px)
+{
+  .todo_detail_sidenav{
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+}
