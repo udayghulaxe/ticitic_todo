@@ -1,0 +1,33 @@
+<!-- This is lists.html
+
+<md-button ui-sref="main.admin" class="register_button">admin</md-button>
+<br>
+{{GlobalVars}} -->
+
+<div ng-if="GlobalVars">
+ <ul class="todo_list_item"  ng-repeat="list in lists track by $index" ng-sortable="{animation:250,ghostClass: 'ghost'}">
+
+	<li ng-dblclick="toggleSidenav('right')" ng-repeat="todo in list.todos_json">
+	<div class="todo_itembody">
+		<!-- <md-checkbox aria-label="{{todo.title}}"  class="md-secondary" ng-model="listsitem.selected"></md-checkbox> -->
+		<md-checkbox md-ink-ripple="false"  aria-label="isDone" ng-model="todo.is_done" ng-true-value="'true'" ng-false-value="'false'" ng-click="mark_complete(todo)"></md-checkbox>
+		<div class="todo_title_wrapper">
+			<span class="todo_title">{{ todo.title }}</span>
+		</div>
+		<div class="list_actions">
+			<span ng-if="todo.due_date != '0000-00-00'"  ng-class="{'red_date' : todo.due_date < today_date}" class="due_date" style="color:red;  padding-top:4px;">{{todo.due_date}}</span>
+		<md-icon  ng-click="doSecondaryAction($event)" aria-label="Send Email" class="md-secondary md-hue-3" >album</md-icon>
+		<!-- <md-icon class="md-secondary" ng-click="doSecondaryAction($event)" aria-label="Chat">stars</md-icon> -->
+		</div>
+	</div>
+
+	<div ng-if="$index==5" class="todo_microdata">
+		<span class="todo_tags cyan_bg" ng-class="{'pink_bg' : $index == 2}">{{ listsitem.selected }} &nbsp;</span>
+		 <span class="todo_tags cyan_bg" ng-class="{'purple_bg' : $index == 5, 'teal_bg' : $index == 2 }">{{ listsitem.selected }}</span>
+		 &nbsp;
+	</div>
+	</li>
+</ul>
+
+
+</div>

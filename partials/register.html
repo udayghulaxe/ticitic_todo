@@ -1,0 +1,48 @@
+
+<!-- Login template-->
+<div layout="column" ng-controller="registerController" class="loginContainer" layout-align="center center" layout-fill="layout-fill">
+   <div class="row login_intro">
+          <div class=" center">
+            <h1>TicTic Todo</h1>
+            <p class="center login-form-text">Most Satisfying Todo App</p>
+          </div>
+        </div>
+  <div class="loginBox md-whiteframe-z1">
+    <md-toolbar>
+      <h2 class="md-toolbar-tools"><span>Register</span></h2>
+    </md-toolbar>
+    <md-content layout="column" class="md-padding">
+		<form name="registerForm" autocomplete="off" novalidate>
+			<md-input-container class="md-block">
+				<label>Name</label>
+				<input  name="registerfullname" ng-model="registerfullname" type="text">
+			</md-input-container>
+			<md-input-container class="md-block">
+				<label>Email</label>
+				<input required  class="validate" name="registeremail" ng-model="registeremail" type="email">
+				<span class="input_error" ng-show="(registerForm.registeremail.$dirty || validation_error_email) && registerForm.registeremail.$error.required">Please enter your email.</span>
+				<span class="input_error" ng-show="registerForm.registeremail.$error.email">Please enter valid email!</span>
+			</md-input-container>
+			<md-input-container class="md-block">
+				<label>Choose Password</label>
+				<input required  class="validate" name="registerpassword" ng-model="registerpassword" type="password" md-minlength="6">
+				<span class="input_error" ng-show="(registerForm.registerpassword.$dirty || validation_error_password) && registerForm.registerpassword.$error.required">Please enter password.</span>
+				<span ng-show="validation_error_password_length" class="input_error" ng-message="md-minlength">Password must be at least 6 charachters long.</span>
+				<span class="input_error" ng-if="registerError != null">
+						<br/><br/>
+						<center><strong>{{registerError}}</strong></center>
+				</span>
+				<span class="input_success" ng-if="registerSuccess != null">
+						<center><strong>{{registerSuccess}}</strong></center>
+				</span>
+
+			</md-input-container>
+			<div class="form_actions">
+				<md-button type="submit" ng-click="register()" class="md-raised md-primary login_button">Register</md-button>
+				<md-button ui-sref="login" class="register_button">Login</md-button>
+				<md-button ui-sref="forgotpassword" class="forgot_password_button">Forgot Password?</md-button>
+			</div>
+		</form>
+    </md-content>
+  </div>
+</div>

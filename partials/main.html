@@ -1,0 +1,21 @@
+<div id="appContainer" md-theme="{{ dynamicTheme }}" ng-init="load()" md-theme-watch>
+  <!-- Header Toolbar -->
+  <div ui-view="header_toolbar"></div>
+
+  <div layout="row" layout-xs="column" layout-sm="column">
+    <!-- Sidenav right view -->
+    <div ui-view="sidenavleft" id="nav_container"></div>
+
+    <!-- Main middle container  -->
+    <div flex="100" flex-gt-sm="55"  layout="column" id="list_content">
+        <md-content layout="column" flex class="md-padding">
+            <div ui-view></div>
+        </md-content>
+    </div>
+
+    <!-- Widgets View -->
+    <div ui-view="widgets" flex="100" flex-gt-sm="45"  layout="column"></div>
+    <!-- Todo Detail View -->
+    <div ui-view="todo_detail" id="todo_detail_view"></div>
+  </div>
+</div>

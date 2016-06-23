@@ -1,0 +1,44 @@
+
+<!-- Login template-->
+<div layout="column" ng-controller="loginController" class="loginContainer" layout-align="center center" layout-fill="layout-fill">
+   <div class="row login_intro">
+          <div class=" center">
+            <h1>TicTic Todo</h1>
+            <p class="center login-form-text">Most Satisfying Todo App</p>
+          </div>
+        </div>
+  <div class="loginBox md-whiteframe-z1">
+    <md-toolbar>
+      <h2 class="md-toolbar-tools"><span>Login</span></h2>
+    </md-toolbar>
+    <md-content layout="column" class="md-padding">
+		<form name="loginForm" autocomplete="off" novalidate>
+			<md-input-container class="md-block">
+				<label>Email</label>
+				<input required md-no-asterisk class="validate" name="email" ng-model="email" type="email">
+				<span class="input_error" ng-show="(loginForm.email.$dirty || validation_error_email) && loginForm.email.$error.required">Please enter your registered email.</span>
+				<span class="input_error" ng-show="loginForm.email.$error.email">Please enter valid email!</span>
+			</md-input-container>
+			<md-input-container class="md-block">
+				<label>Password</label>
+				<input required md-no-asterisk class="validate" name="password" ng-model="password" type="password">
+				<span class="input_error" ng-show="(loginForm.password.$dirty || validation_error_password) && loginForm.password.$error.required">Please enter password.</span>
+					<span class="input_error" ng-if="serverError != null">
+						<br/><br/>
+						<center><strong>{{serverError}}</strong></center>
+					</span>
+					<span class="input_success" ng-if="serverSuccess != null">
+					<br/><br/>
+						<center><strong>{{serverSuccess}}</strong></center>
+					</span>
+			</md-input-container>
+			<div class="form_actions">
+
+				<md-button ng-click="login()" type="submit" class="md-raised md-primary login_button">Login</md-button>
+				<md-button ui-sref="register" class="register_button">Register</md-button>
+				<md-button ui-sref="forgotpassword" class="forgot_password_button">Forgot Password?</md-button>
+			</div>
+		</form>
+    </md-content>
+  </div>
+</div>
