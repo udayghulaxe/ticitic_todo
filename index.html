@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+  <title update-title></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Angular Material style sheet -->
+  <!-- <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.css"> -->
+  <link rel="stylesheet" href="css/angular-material.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body md-theme="default" layout="column" ng-controller="appController" ng-cloak>
+  <div id="rootContainer" ui-view></div>
+
+  <!-- Angular library -->
+  <script src="js/angular.js"></script>
+
+  <!-- Angular Material requires Angular.js Libraries -->
+  <!-- <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script> -->
+  <!-- <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-aria.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-messages.min.js"></script> -->
+
+  <script src="js/angular-animate.min.js"></script>
+  <script src="js/angular-aria.min.js"></script>
+  <script src="js/angular-messages.min.js"></script>
+
+
+  <!-- Angular Material Library -->
+  <!-- <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.js"></script> -->
+  <script src="js/angular-material.min.js"></script>
+
+  <!-- Other custom js files -->
+  <script src="js/angular-ui-router.min.js"></script>
+  <!-- Sortable.js -->
+  <script src="js/Sortable.min.js"></script>
+  <!-- <script src="http://rubaxa.github.io/Sortable/Sortable.js"></script> -->
+  <!-- ng-sortable.js -->
+  <script src="js/ng-sortable.js"></script>
+  <!-- <script src="http://rubaxa.github.io/Sortable/ng-sortable.js"></script> -->
+  <script src="main.js"></script>
+  <script src="globals.js"></script>
+  <script src="config.js"></script>
+  <script src="controllers/controllers.js"></script>
+  <script src="directives/directives.js"></script>
+  <script src="services/services.js"></script>
+  <script src="directives/updateTitle_directive.js"></script>
+</body>
+</html>
