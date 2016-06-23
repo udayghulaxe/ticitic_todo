@@ -1,0 +1,18 @@
+<md-sidenav layout="column" class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-sm')">
+	<md-toolbar class="user_info_toolbar md-hue-2">
+	  <span flex></span>
+	  <div layout="column" class="user_info_div md-toolbar-tools-bottom inset">
+	      <img ng-src="images/user.jpg" class="user_avatar">
+	      <p>Firstname Lastname</p>
+	  </div>
+	</md-toolbar>
+  <md-list class="md-dense" flex>
+  <a class="sidenav_links" href="" ng-repeat="list in lists" ui-sref="dashboard.listdetail({list_id:list.list_id})" >
+    <md-list-item md-ink-ripple >
+    <div class="md-list-item-text" layout="column">
+       <span class="sidenav_link_span">{{ list.list_title }}</span>
+    </div>
+    </md-list-item>
+  </a>
+  </md-list>
+</md-sidenav>
